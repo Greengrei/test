@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<title>Site</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,500&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="row__all">
+				<header id="header" class="header">
+					<div class="header__logo">
+						<img src="img/logo.svg" alt="logo">
+					</div>
+					<nav class="header__menu">
+						<ul>
+							<li><a href="#">Commercial</a></li>
+							<li><a href="#">Editorial</a></li>
+							<li><a href="#">Reportage</a></li>
+							<li><a href="#">Meet me</a></li>
+						</ul>
+					</nav>
+					<div class="header__burger">
+						<img src="img/burger.svg" alt="burger">
+					</div>
+				</header>
+
+				<div class="body__bg">
+					<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path class="path"
+							d="M143.88 35.087C-164.416 336.916 104.711 400.329 221.865 2c125.224 147.02 569.92 343.761 134.311 110.996C613.685 570.4 664.427 276.819 608.595 791"
+							stroke="#2828BD" />
+					</svg>
+				</div>
+
+				<div class="slider">
+					<div class="slider__box">
+						<div class="slider__item">
+							<div class="slider__item-one parallax" data-speed="0.5">
+								<img src="img/image2.png" alt="image2">
+							</div>
+							<div class="slider__item-two parallax" data-speed="1.5">
+								<img src="img/image1.png" alt="image1">
+							</div>
+							<div class="slider__item-three parallax" data-speed="2.5">
+								<img src="img/image3.png" alt="image3">
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-one parallax" data-speed="0.5">
+								<img src="img/image1.3.png" alt="image2">
+							</div>
+							<div class="slider__item-two parallax" data-speed="1.5">
+								<img src="img/image3.1.png" alt="image1">
+							</div>
+							<div class="slider__item-three parallax" data-speed="2.5">
+								<img src="img/image2.3.png" alt="image3">
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-one parallax" data-speed="0.5">
+								<img src="img/image3.1.png" alt="image2">
+							</div>
+							<div class="slider__item-two parallax" data-speed="1.5">
+								<img src="img/image2.1.png" alt="image1">
+							</div>
+							<div class="slider__item-three parallax" data-speed="2.5">
+								<img src="img/image1.1.png" alt="image3">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider__text">
+				<div class="slider__text-item">
+
+					<div class="slider__subtext-item">
+						<div class="slider__subtext-text">
+							<img class="slider__subtext-svg" src="img/ink.svg" alt="ink-svg">
+						</div>
+					</div>
+					<div class="slider__subtext-item">
+						<img class="slider__subtext-img" src="img/ink-img.png" alt="ink-img">
+					</div>
+
+					<div class="slider__subtext-item">
+						<div class="slider__subtext-text">
+							<img class="slider__subtext-svg" src="img/ink.svg" alt="ink-svg">
+						</div>
+					</div>
+
+					<div class="slider__subtext-item">
+						<img class="slider__subtext-img" src="img/ink-img.png" alt="ink-img">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="row">
+				<footer class="footer">
+					<div class="footer__box">
+						<p class="inst">Inst</p>
+						<span></span>
+						<p class="fb">Fb</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+	<script src="js/lib.min.js"></script>
+
+	<script>
+		$(function () {
+			$('.slider__box').slick({
+				swipeToSlide: 1,
+				slidesToShow: 1,
+				infinite: true,
+				arrows: false,
+				centerMode: true,
+				fade: true,
+				autoplaySpeed: 3000,
+				draggable: false,
+			});
+		});
+
+		$(function () {
+			$('.slider__text-item').slick({
+				slidesToScroll: 1,
+				slidesToShow: 1,
+				infinite: true,
+				arrows: false,
+				centerMode: true,
+				centerPadding: '18%',
+				//draggable: false,
+				mobileFirst: true,
+				asNavFor: '.slider__box',
+			});
+		});
+
+		$(document).ready(function () {
+			$('.header__burger').on('click', function () {
+				$('.header__menu').slideToggle(300, function () {
+					if ($(this).css('display') === "none") {
+						$(this).removeAttr('style');
+					}
+				});
+			});
+		});
+
+		function parallax(event) {
+			this.querySelectorAll(".parallax").forEach(layer => {
+				let speed = layer.getAttribute("data-speed") * 0.01;
+				let distanceX = (screen.width / 2 - event.clientX) * speed;
+				let distanceY = (screen.height / 2 - event.clientY) * speed;
+				layer.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
+			});
+		}
+		document.addEventListener("mousemove", parallax);
+		$(document).ready(function () {
+			const controller = new ScrollMagic.Controller({
+				paused: true
+			});
+			let logo = new TimelineMax({});
+			logo.from('.header__logo', 2, {
+				top: '-125px',
+				transform: 'scale(2)',
+			});
+			logo.from('.header__menu', 1, {
+				transform: 'scale(-1)',
+				rotation: '345deg',
+				opacity: 0.2
+			}, {
+				transform: 'scale(1)',
+				rotation: '345deg',
+				opacity: 1,
+			});
+			logo.from('.header__burger', 2, {
+				x: 100,
+				opacity: 0,
+			}, {
+				x: 0,
+				opacity: 1,
+			});
+			logo.from('.footer__box', 3, {
+				x: 400,
+				opacity: 0,
+				transform: 'rotate(45deg)'
+			}, {
+				x: 0,
+				opacity: 1,
+				duration: 2
+			});
+		});
+	</script>
+</body>
+
+</html>

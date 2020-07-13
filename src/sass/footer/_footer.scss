@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "_smart-grid";
+
+.footer {
+	width: 100%;
+	margin-bottom: 47px;
+	position: absolute;
+	left: 47px;
+	bottom: 0;
+
+	.footer__box {
+		display: flex;
+		align-items: center;
+
+		.inst {
+			font-family: 'TT_Travels';
+			font-size: 11px;
+			line-height: 13px;
+			letter-spacing: 0.02em;
+			color: #000000;
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		span {
+			width: 56px;
+			height: 1px;
+			background: #393939;
+			opacity: 0.24;
+			margin: 0 8px;
+		}
+
+		.fb {
+			font-family: 'TT_Travels';
+			font-size: 11px;
+			line-height: 13px;
+			letter-spacing: 0.02em;
+			color: #000000;
+			font-weight: 500;
+			font-style: normal;
+		}
+	}
+}
