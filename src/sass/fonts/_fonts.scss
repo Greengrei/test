@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* Подключения шрифта в /css/stylename.css */
+@font-face {
+	font-family: "Intro";
+	src:url("../fonts/Intro/Intro-Black.otf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
+	src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"),
+	url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNova/ProximaNova-Bold.ttf");
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+}

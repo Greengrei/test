@@ -4,51 +4,117 @@
 @import "fonts/_fonts";
 
 .header {
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	max-width: 1920px;
+	width: 100%;
+	height: 56px;
+	background-color: #ffffff;
 }
 
-.header__logo {
-	cursor: pointer;
-	padding-top: 33px;
+.header__left {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 17px;
+	margin-bottom: 12px;
+	margin-left: 18px;
+
+
+	a {
+		width: 109px;
+		height: 22px;
+		font-family: 'ProximaNova', sans-serif;
+		font-size: 30px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 10.15px;
+		text-align: center;
+		color: #040404;
+		display: flex;
+		align-items: center;
+	}
+
+	p {
+		margin-top: -4px;
+		margin-left: 33px;
+		width: 198px;
+		height: 25px;
+		font-family: 'ProximaNova', sans-serif;
+		font-size: 13px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000000;
+		text-transform: uppercase;
+
+		@include md (font-size, 10px);
+
+		@include xs (display, none);
+	}
 }
 
-.header__burger {
-	display: none;
+.header__right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-	@include xs(display, block);
+	.header__right-tel {
+		margin-top: 15px;
+		margin-right: 15px;
 
-	@include xsh(margin-top, 33px);
-}
+		@include md (margin-right, 8px);
 
-.header__menu {
+		a{
+			height: 24px;
+			font-family: 'ProximaNova';
+			font-size: 35px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 0.6;
+			letter-spacing: normal;
+			text-align: left;
+			color: #000000;
 
-	@include xs(display, none);
+			@include md (font-size, 20px);
 
-	@include xsh(margin-top, 10px);
-	@include xsh(margin-left, 100px);
-	@include xsh(position, relative);
-	@include xsh(z-index, 1);
+			@include xs (display, none);
+		}
+	}
 
+	.header__right-button {
+		margin-right: -32px;
+		margin-top: 5px;		
+		width: 130px;
+		height: 30px;
+		background-image: linear-gradient(to top, #ff4f58, #fd7048);
+		font-family: 'ProximaNova';
+		font-size: 13px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: #ffffff;
+		cursor: pointer;
+		border: none;
 
-	ul {
-		text-align: right;
-		
-		li {
-			list-style-type: none;
+		@include md (margin-right, -5px);
 
-			a {
-				font-family: 'TT_Travels';
-				font-style: normal;
-				font-weight: 300;
-				font-size: 11px;
-				line-height: 13px;
-				letter-spacing: 0.02em;
-				text-transform: capitalize;
-				color: #000000;
-				padding-top: 8px;
-			}
+		@include xs (width, 160px);
+
+		&:hover,
+		&:focus {
+			outline: none;
+			opacity: 0.9;
 		}
 	}
 }

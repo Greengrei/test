@@ -2,42 +2,87 @@
 @import "_smart-grid";
 
 .footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: -280px;
+	max-width: 1920px;
 	width: 100%;
-	margin-bottom: 47px;
-	position: absolute;
-	left: 47px;
-	bottom: 0;
+	height: 100%;
+	opacity: 0.8;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
 
-	.footer__box {
-		display: flex;
-		align-items: center;
+.footer__box {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
 
-		.inst {
-			font-family: 'TT_Travels';
-			font-size: 11px;
-			line-height: 13px;
-			letter-spacing: 0.02em;
-			color: #000000;
-			font-weight: 500;
-			font-style: normal;
+	@include xs(margin-left, 66px);
+
+	@include row-flex();
+
+	.footer__box-item {
+		max-width: 230px;
+		width: 100%;
+		text-align: center;
+
+		@include col();
+		@include size(6);
+		@include size-md(8);
+		@include size-xs(12);
+		@include md(margin-top, 10px);
+	
+		img {
+			margin: 0 auto;
 		}
 
-		span {
-			width: 56px;
-			height: 1px;
-			background: #393939;
-			opacity: 0.24;
-			margin: 0 8px;
+		h3 {
+			margin-top: 6px;
+			font-family: 'ProximaNova';
+			font-size: 21px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			text-align: center;
+			color: #000000;
 		}
 
-		.fb {
-			font-family: 'TT_Travels';
-			font-size: 11px;
-			line-height: 13px;
-			letter-spacing: 0.02em;
-			color: #000000;
-			font-weight: 500;
+		p {
+			margin-top: 4px;
+			font-family: 'ProximaNova';
+			font-size: 15px;
+			font-weight: normal;
+			font-stretch: normal;
 			font-style: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			text-align: center;
+			color: #000000;
 		}
 	}
+}
+
+.item1 {
+	margin-top: 1px;
+	margin-left: 18px;
+}
+
+.item2 {
+	margin-top: 1px;
+	margin-left: 4px;
+}
+
+.item3 {
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.item4 {
+	margin-top: 1px;
+	margin-right: -38px;
 }
